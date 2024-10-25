@@ -1,0 +1,313 @@
+/* Color Variables */
+:root {
+  --font-color: #534b44;
+  --background-color: #ddaf95;
+  --header-footer-background: #25624c;
+  --header-footer-text: #e8cebf;
+  --nav-hover-color: #927b73;
+  --heading-color: #8b4513;
+  --header-border-bottom: #927b73;
+  --section-background: #e8cebf;
+  --contact-background: #927b73;
+  --input-border: #8b4513;
+  --input-focus-shadow: rgba(46, 139, 87, 0.4);
+  --button-background: #25624c;
+  --button-text-color: #e8cebf;
+  --image-shadow: rgba(0, 0, 0, 0.2);
+  --section-shadow: rgba(0, 0, 0, 0.1);
+  --form-shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* Universal Selector */
+* {
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  line-height: 1.6;
+  color: var(--font-color);
+}
+
+/* Header and Navigation */
+/* Header Fade-In */
+header {
+  background-color: var(--header-footer-background);
+  color: var(--header-footer-text);
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 6px solid var(--header-border-bottom);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+/* Link Hover Underline Animation */
+nav a {
+  color: var(--header-footer-text);
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--nav-hover-color);
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--nav-hover-color);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+/* Section Scroll Animation */
+@keyframes slideUpFade {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+section {
+  background-color: var(--section-background);
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--section-shadow);
+  opacity: 0;
+  animation: slideUpFade 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Image Hover Zoom */
+figure {
+  text-align: center;
+  margin-top: 20px;
+}
+
+figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--image-shadow);
+  transition: transform 0.3s ease;
+}
+
+figure img:hover {
+  transform: scale(1.05);
+}
+
+figcaption {
+  color: var(--heading-color);
+  font-size: 16px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Contact Section */
+#contact {
+  background-color: var(--contact-background);
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--section-shadow);
+}
+
+/* Contact Form */
+#contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--form-shadow);
+  transition: transform 0.3s ease;
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Shake Animation for Error */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.error {
+  animation: shake 0.3s ease;
+}
+
+#contact-form:hover {
+  transform: translateY(-5px);
+}
+
+#contact-form h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--heading-color);
+  font-size: 20px;
+}
+
+#contact-form label {
+  display: block;
+  margin-top: 10px;
+  color: var(--heading-color);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Focus Glow Animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 8px var(--input-focus-shadow);
+  }
+  50% {
+    box-shadow: 0 0 12px var(--input-focus-shadow);
+  }
+  100% {
+    box-shadow: 0 0 8px var(--input-focus-shadow);
+  }
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  font-size: 14px;
+  transition: box-shadow 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+/* Button Hover Bounce */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Ripple Effect for Button */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+  animation: bounce 0.5s ease infinite;
+}
+
+button:hover {
+  background-color: var(--button-background);
+  transform: translateY(-2px);
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(0);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ripple 0.6s linear;
+}
+
+button:active::after {
+  animation: ripple 0.6s linear;
+}
+
+/* Footer */
+footer {
+  background-color: var(--header-footer-background);
+  color: var(--button-text-color);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
