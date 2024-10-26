@@ -12,8 +12,8 @@ Welcome to **Coming Soon Custom CSS**! This repository contains a custom "Coming
 
 ## Demo
 
-[!IMPORTANT]
-Check out the live demo on GitHub Pages: [https://lesley-byte.github.io/ComingSoonCustomCss](https://lesley-byte.github.io/ComingSoonCustomCss)
+> [!IMPORTANT]
+> Check out the live demo on GitHub Pages: [https://lesley-byte.github.io/ComingSoonCustomCss](https://lesley-byte.github.io/ComingSoonCustomCss)
 
 ## Table of Contents
 
