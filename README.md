@@ -2,8 +2,6 @@
 
 ![shield](https://img.shields.io/badge/Licensed-MIT-brightgreen)
 
-![GitHub stars](https://img.shields.io/github/stars/lesley-byte/ComingSoonCustomCss?style=social)
-
 Welcome to **Coming Soon Custom CSS**! This repository contains a custom "Coming Soon" webpage styled with CSS animations and effects to create an engaging placeholder website.
 
 ## Screenshot
