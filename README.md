@@ -2,6 +2,8 @@
 
 ![shield](https://img.shields.io/badge/Licensed-MIT-brightgreen)
 
+![GitHub stars](https://img.shields.io/github/stars/lesley-byte/ComingSoonCustomCss?style=social)
+
 Welcome to **Coming Soon Custom CSS**! This repository contains a custom "Coming Soon" webpage styled with CSS animations and effects to create an engaging placeholder website.
 
 ## Screenshot
@@ -10,6 +12,7 @@ Welcome to **Coming Soon Custom CSS**! This repository contains a custom "Coming
 
 ## Demo
 
+[!IMPORTANT]
 Check out the live demo on GitHub Pages: [https://lesley-byte.github.io/ComingSoonCustomCss](https://lesley-byte.github.io/ComingSoonCustomCss)
 
 ## Table of Contents
@@ -57,5 +60,3 @@ Feel free to customize the HTML and CSS files to match your branding and style. 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
-![GitHub stars](https://img.shields.io/github/stars/lesley-byte/ComingSoonCustomCss?style=social)
